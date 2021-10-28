@@ -5,7 +5,7 @@ import requests,re,urllib.request
 #Date : 28 Oct 2021
 ##############################################
 
-url = "https://www.smule.com/sing-recording/1125341938_4193648178"
+url = input("Input Smule Video URL : ")
 request = requests.get(f"https://sownloader.com/index.php?url={url}#support-sownloader").text
 mp4 = re.findall("(?:url\=)(https:\/\/c-cl\.cdn\.smule\.com\/.+\.mp4)",request)
 
